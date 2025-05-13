@@ -1,0 +1,27 @@
+.promo-video {
+    grid-column: 1/-1;
+    height: 680px;
+    width: 100%;
+    position: relative;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color: white;
+        text-align: center;
+        padding: 176px 32px 32px 32px;
+
+        p {
+            font-size: 72px;
+        }
+    }
+}

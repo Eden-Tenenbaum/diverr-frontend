@@ -8,33 +8,29 @@
 @import "basics/helpers";
 @import "basics/layout";
 @import "basics/base";
-// @import "basics/links";
+@import "basics/links";
 @import "basics/forms";
-
+@import "basics/lists";
+@import "basics/preview";
 
 // pages
 @import "RootCmp";
-
-@import "pages/AboutUs";
-// @import "pages/HomePage";
-@import "pages/CarIndex";
-@import "pages/ReviewIndex";
+@import "pages/HomePage";
+@import "pages/GigIndex";
+@import "pages/GigDetails";
 @import "pages/UserDetails";
-@import "pages/TaskDetails";
-@import "pages/LoginSignup";
-@import "pages/Chat";
+@import "pages/Purchase";
+@import "pages/ProfileDetails";
 
 // Components
-@import "cmps/list";
-@import "cmps/preview";
-
+@import "cmps/LoginSignup";
 @import "cmps/AppHeader";
 @import "cmps/AppFooter";
 @import "cmps/UserMsg";
-
-@import "cmps/CarFilter";
+@import "cmps/GigFilter";
 @import "cmps/ReviewEdit";
 @import "cmps/ReviewList";
-@import "cmps/ReviewPreview";
-// @import "cmps/CarList";
-// @import "cmps/CarPreview";
+@import "cmps/GigList";
+@import "cmps/GigPreview";
+@import "cmps/Categories";
+@import "cmps/PromoVideo";

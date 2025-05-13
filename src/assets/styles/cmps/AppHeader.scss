@@ -1,61 +1,231 @@
-.app-header {
-    display: flex;
-    min-height: 3.5rem;
+.sticky {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    background-color: white;
+}
 
-    background-color: $clr4;
-    padding: rem(10px) 1rem;
-    
-    nav {
+.header-row-wrapper {
+    border-bottom: 0.1px solid #e4e5e7; //temporary until hero
+    display: grid;
+    grid-template-columns: auto minmax(0, 1400px) auto;
+    font-family: Macan;
+
+    .app-header {
+        grid-column: 2;
         display: flex;
-        width: 100%;
         align-items: center;
-        gap: 1em;
-        
-        font-size: .8em;
+        height: 80px;
+        max-width: 1400px;
 
-        .active {
-            color: $clr1;
+
+        * {
+            font-size: 1rem;
         }
 
         .logo {
-            font-size: 1.4em;
+            //bandaided - replace with img?
+            align-content: center;
+            color: $textclr2;
+            margin-right: 32px;
+            margin-top: -12px;
+            height: 27px;
+            width: 89px;
             font-weight: bold;
-            margin-inline-end: 2em;
+            font-size: 1.5rem;
+
+            span {
+                color: green;
+            }
         }
 
-        .login-link {
-            margin-inline-start: auto;
+        .header-search-bar {
+            display: flex;
+            flex: 1;
+            align-items: center;
+
+            * {
+                margin: 0;
+            }
+
+            input {
+                flex: 1;
+                padding: 10px 2px 10px 16px;
+                border-color: #c5c6c9;
+                border-radius: 4px 0px 0px 4px;
+                border-width: 0.8px 0px 0.8px 0.8px;
+                border-style: solid;
+                color: #62646a;
+            }
+
+            button {
+                cursor: pointer;
+                padding: 8px 16px;
+                background-color: $textclr3;
+                font-size: 0.8rem;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+
+                i {
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
         }
 
-        button {
-            margin-inline-end: 0;
-        }
-    }
+        nav {
+            margin-left: 32px;
 
-    .user-info {
-        display: flex;
-        align-items: center;
-        margin-inline-start: auto;
+            ul {
+                font-size: 1rem;
+                display: grid;
+                grid-auto-flow: column;
+                white-space: nowrap;
+                margin: 0;
 
-        color: $clr1;
+                li:nth-child(1) {
+                    padding-right: 16px;
+                }
 
-        .score {
-            padding: 8px;
-            background-color: $clr2;
-            border-radius: 50%;
-            margin: 10px;
+                li:nth-child(2),
+                li:nth-child(3) {
+                    margin-right: 4px;
+                    border-radius: 50%;
 
-            color: $clr6;
-        }
+                    &:hover {
+                        background-color: #f5f5f5;
+                    }
+                }
 
-        img {
-            width: 32px;
-            aspect-ratio: 1;
-            border-radius: 50%;
-        }
-        
-        .btn-link {
-            color: $clr2;
+                li:nth-child(4),
+                li:nth-child(5),
+                li:nth-child(6) {
+                    padding-right: 24px;
+                }
+
+                li {
+                    display: flex;
+                    align-items: center;
+
+
+                }
+
+                .upgrade-to-pro,
+                .header-orders,
+                .header-try-diverr-go {
+                    font-weight: 600;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .upgrade-to-pro {
+                    background-color: $transparent;
+                    color: $textclr3;
+                    margin: 0;
+                    padding: 8px 16px;
+                    border-radius: 8px;
+
+                    &:hover {
+                        background-color: #f5f5f5;
+                    }
+                }
+
+
+                .header-btn {
+                    background-color: $transparent;
+                    color: $textclr4;
+                    border-radius: 50%;
+                    margin: 0;
+                    position: relative;
+
+                    * {
+                        font-size: 1.2rem;
+                    }
+
+                    span {
+                        position: absolute;
+                        background-color: #c14a83;
+                        border-radius: 50%;
+                        width: 4px;
+                        height: 4px;
+                        top: -1px;
+                    }
+                }
+
+                .header-orders {
+                    color: $textclr4;
+                    transition: 0.3s ease-in-out;
+
+                    &:hover {
+                        color: #1dbf73;
+
+                    }
+                }
+
+                .header-try-diverr-go {
+                    background-image: linear-gradient(84deg, rgb(240, 166, 166) 3%, rgb(6, 93, 127) 73%);
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    -webkit-text-fill-color: transparent;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        animation: colorPulse 2.5s infinite;
+                        background-image: none;
+                    }
+
+                    @keyframes colorPulse {
+                        0% {
+                            background-color: rgb(6, 93, 127);
+                        }
+
+                        50% {
+                            background-color: rgb(240, 166, 166);
+                        }
+
+                        100% {
+                            background-color: rgb(6, 93, 127);
+                        }
+                    }
+                }
+
+                .login-bandaid {
+
+                    .header-user-options-btn {
+                        width: 32px;
+                        height: 32px;
+                        font-size: 1rem;
+                        border-radius: 50%;
+                        background-color: #25a1b0;
+                        color: white;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                        margin: 0;
+                        cursor: pointer;
+                    }
+
+                    .header-join-btn {
+                        background-color: $transparent;
+                        border: 0.1px solid black;
+                        border-radius: 4px;
+                        color: $textclr3;
+                    }
+
+                    // .login-circle {
+                    //     color: red;
+
+                    //     &.active {
+                    //         color: green;
+                    //     }
+                    // }
+                }
+            }
         }
     }
 }

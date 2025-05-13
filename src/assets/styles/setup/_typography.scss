@@ -1,8 +1,21 @@
 @font-face {
-    // font-family: caveat;
-    // src: url(../../fonts/Caveat/Caveat-Regular.ttf);
+    font-family: caveat;
+    src: url(../../fonts/Caveat/Caveat-Regular.ttf);
 }
+
 @font-face {
-    // font-family: montserrat;
-    // src: url(../../fonts/Montserrat/Montserrat-Regular.ttf);
+    font-family: montserrat;
+    src: url(../../fonts/Montserrat/Montserrat-Regular.ttf);
 }
+
+@font-face {
+    font-family: Macan;
+    src: url(/macan-regular.woff2);
+  }
+  
+//   src: url('../../fonts/macan-regular.woff2') format('truetype');
+//   src: url('../../fonts/MacanPanWeb-Book.ttf') format('truetype');
+//     src: url('../../fonts/MacanPanWeb-Extrabold.ttf') format('truetype');
+//     src: url('../../fonts/MacanPanWeb-Light.ttf') format('truetype');
+//     src: url('../../fonts/MacanPanWeb-Medium.ttf') format('truetype');
+//     src: url('../../fonts/MacanPanWeb-Semibold.ttf') format('truetype');
